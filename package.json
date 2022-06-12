@@ -12,5 +12,17 @@
     "kit",
     "tools",
     "generic"
+  ],
+  "samples": [
+    {
+      "displayName": "Bloc Demo",
+      "description": "Simple demo implementation of the bloc pattern",
+      "path": "Samples~/BlocDemo"
+    },
+    {
+      "displayName": "Singleton Demo",
+      "description": "Simple demo implementation of the singleton pattern",
+      "path": "Samples~/SingletonDemo"
+    }
   ]
 }

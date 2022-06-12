@@ -2,10 +2,10 @@ using UnityEngine;
 using UnityEditor;
 using System.Collections.Generic;
 
-namespace DodoWorkshop.GameKit.Editors
+namespace DodoWorkshop.GameKit.Editor
 {
     [CustomEditor(typeof(BlocProvider))]
-    public class BlocProviderCustomEditor : Editor
+    public class BlocProviderCustomEditor : UnityEditor.Editor
     {
         private BlocProvider blocProvider;
         private SerializedProperty scanChildrenProperty;

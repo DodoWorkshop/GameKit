@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DodoWorkshop.GameKit.Editors
+namespace DodoWorkshop.GameKit.Editor
 {
 	public static class SerializedPropertyExtensions
 	{
