@@ -1,0 +1,16 @@
+{
+  "name": "com.dodoworkshop.gamekit",
+  "version": "0.0.1",
+  "displayName": "Game Kit",
+  "description": "A kit contining multiple generic tools for Unity game developement",
+  "author": {
+    "name": "Donovan Persent",
+    "email": "donovan.persent@gmail.com"
+  },
+  "unity": "2019.1",
+  "keywords": [
+    "kit",
+    "tools",
+    "generic"
+  ]
+}
