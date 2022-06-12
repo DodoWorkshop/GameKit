@@ -2,9 +2,9 @@
   "name": "com.dodoworkshop.gamekit",
   "version": "0.0.1",
   "displayName": "Game Kit",
-  "description": "A kit contining multiple generic tools for Unity game developement",
+  "description": "A kit containing multiple generic tools for Unity game development",
   "author": {
-    "name": "Donovan Persent",
+    "name": "Dodo Workshop",
     "email": "donovan.persent@gmail.com"
   },
   "unity": "2019.1",
