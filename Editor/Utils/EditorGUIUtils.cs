@@ -4,7 +4,7 @@ using System.Collections;
 using System.Reflection;
 using System.Linq;
 
-namespace DodoWorkshop.GameKit.Editors
+namespace DodoWorkshop.GameKit.Editor
 {
 	public static class EditorGUIUtils
 	{

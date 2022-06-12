@@ -1,10 +1,10 @@
 using UnityEngine;
 using UnityEditor;
 
-namespace DodoWorkshop.GameKit.Editors
+namespace DodoWorkshop.GameKit.Editor
 {
     [CustomEditor(typeof(Bloc<,>), true)]
-	public class BlocCustomEditor : Editor
+	public class BlocCustomEditor : UnityEditor.Editor
 	{
         private IBloc bloc;
         private SerializedProperty initializeStateProperty;

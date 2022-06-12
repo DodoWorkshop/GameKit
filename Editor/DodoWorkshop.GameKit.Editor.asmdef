@@ -1,0 +1,18 @@
+{
+    "name": "GameKit.Editor",
+    "rootNamespace": "DodoWorkshop",
+    "references": [
+        "GUID:7b7c2fa17febf0b43a4b57935a2dd564"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
