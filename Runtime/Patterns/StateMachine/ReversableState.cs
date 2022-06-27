@@ -1,17 +1,22 @@
 namespace DodoWorkshop.GameKit
 {
     /// <summary>
-    /// Base implementation for <see cref="IReversableState{TState}"/>
+    /// Base class for a <see cref="State"/> that can return to previous one
     /// </summary>
-    /// <typeparam name="TState">The type of the <see cref="IState{T}"/>(mostly self)</typeparam>
-    public abstract class ReversableState<TState> : State<TState>, IReversableState<TState> 
-        where TState : ReversableState<TState>
+    public abstract class ReversableState : State
     {
-        /// <inheritdoc cref="IReversableState{TState}.PreviousState"/>
-        public TState PreviousState { get; private set; }
+        /// <summary>
+        /// The previous <see cref="State"/> from this state (null if there was no state before)
+        /// </summary>
+        public State PreviousState { get; private set; }
 
-        /// <inheritdoc cref="IState{TState}.Enter(IStateMachine{TState}, TState)"/>
-        public override void Enter(IStateMachine<TState> stateMachine, TState previousState = null)
+        /// <summary>
+        /// True if this <see cref="State"/> can be reversed (override it with your own implementation)
+        /// </summary>
+        public virtual bool CanBeReversed => true;
+
+        /// <inheritdoc cref="State.Enter(StateMachine, State)"/>
+        public override void Enter(StateMachine stateMachine, State previousState = null)
         {
             PreviousState = previousState;
 

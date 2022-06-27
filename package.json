@@ -23,6 +23,11 @@
       "displayName": "Singleton Demo",
       "description": "Simple demo implementation of the singleton pattern",
       "path": "Samples~/SingletonDemo"
+    },
+    {
+      "displayName": "State Machine Demo",
+      "description": "Simple demo implementation of a state machine",
+      "path": "Samples~/StateMachineDemo"
     }
   ]
 }
