@@ -3,36 +3,41 @@ using UnityEngine.Events;
 namespace DodoWorkshop.GameKit
 {
     /// <summary>
-    /// Base implementation for <see cref="IState{TState}"/>
+    /// The main class for every state used by a <see cref="StateMachine"/>
     /// </summary>
-    /// <typeparam name="TState">The type of the <see cref="IState{T}"/>(mostly self)</typeparam>
-    public abstract class State<TState> : IState<TState> where TState : State<TState>
+    public abstract class State
     {
-        protected IStateMachine<TState> stateMachine;
+        protected StateMachine stateMachine;
 
         /// <summary>
         /// This event is thrown when entering in this state
         /// </summary>
-        public UnityAction<TState> OnStateEnter { get; set; }
+        public UnityAction<State> OnStateEnter { get; set; }
 
         /// <summary>
         /// This event is thrown when exiting this state
         /// </summary>
-        public UnityAction<TState> OnStateExit { get; set; }
+        public UnityAction<State> OnStateExit { get; set; }
 
-        /// <inheritdoc cref="IState{TState}.Enter(IStateMachine{TState}, TState)"/>
-        public virtual void Enter(IStateMachine<TState> stateMachine, TState previousState = null)
+        /// <summary>
+        /// This method is called by the <see cref="StateMachine"/> when changing to this <see cref="State"/>
+        /// </summary>
+        /// <param name="stateMachine">The ref to the owning <see cref="StateMachine"/></param>
+        /// <param name="previousState">The previous <see cref="State"/> if exists</param>
+        public virtual void Enter(StateMachine stateMachine, State previousState = null)
         {
             this.stateMachine = stateMachine;
             OnEnter();
-            OnStateEnter?.Invoke(this as TState);
+            OnStateEnter?.Invoke(this);
         }
 
-        /// <inheritdoc cref="IState{TState}.Exit()"/>
+        /// <summary>
+        /// This method is called by the state machine before changing to another state
+        /// </summary>
         public virtual void Exit()
         {
             OnExit();
-            OnStateExit?.Invoke(this as TState);
+            OnStateExit?.Invoke(this);
         }
 
         /// <summary>
