@@ -1,6 +1,6 @@
 {
   "name": "com.dodoworkshop.gamekit",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "displayName": "Game Kit",
   "description": "A kit containing multiple generic tools for Unity game development",
   "author": {
