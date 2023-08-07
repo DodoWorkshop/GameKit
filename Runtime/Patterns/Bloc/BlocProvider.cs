@@ -16,7 +16,7 @@ namespace DodoWorkshop.GameKit
     /// You can also add the <see cref="IWithBlocs"/> interface and and call the
     /// LoadBlocs() method.
     /// </summary>
-    [AddComponentMenu("Dodo Workshop/Blocs/Bloc Provider")]
+    [AddComponentMenu(PathConstants.ComponentMenu.BASE_PATH + "/Blocs/Bloc Provider")]
     [DefaultExecutionOrder(DEFAULT_EXECUTION_ORDER)]
     public class BlocProvider : MonoBehaviour
     {

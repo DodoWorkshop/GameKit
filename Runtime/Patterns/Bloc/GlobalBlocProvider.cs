@@ -7,7 +7,7 @@ namespace DodoWorkshop.GameKit
     /// make this provider the global one. You can have only have one <see cref="GlobalBlocProvider"/>
     /// in the scene, but it can be accesses from anywhere.
     /// </summary>
-    [AddComponentMenu("Dodo Workshop/Blocs/Global Bloc Provider")]
+    [AddComponentMenu(PathConstants.ComponentMenu.BASE_PATH + "/Blocs/Global Bloc Provider")]
     [RequireComponent(typeof(BlocProvider))]
     public class GlobalBlocProvider : Singleton<GlobalBlocProvider>
 	{
